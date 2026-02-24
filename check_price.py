@@ -23,7 +23,7 @@ message = f"As of {trading_day}, the {symbol} share price has changed by: {price
 recipient = os.getenv("EMAIL")
 
 # print(res.json())
-print(message)
+# print(message)
 
 subprocess.run(
     ["mail", "-s", subject, recipient],
