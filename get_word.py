@@ -5,6 +5,8 @@ from bs4 import BeautifulSoup
 
 def get_word():
 
+    message = """"""
+
     with open("kamus.json", mode="r", encoding="utf-8") as read_json_file:
         kamus = json.load(read_json_file)
 
@@ -16,6 +18,13 @@ def get_word():
     print(random_word_url)
     soup = BeautifulSoup(response.text, "html.parser")
     container = soup.find("div", id="d1")
-    for element in container:
-        print(element)
 
+    definition = container.text
+    for element in container:
+        word = soup.find("b").text
+
+    message += "WORD OF THE DAY\n"
+    message += f"\n{word}\n"
+    message += f"{definition}\n"
+
+    return message
