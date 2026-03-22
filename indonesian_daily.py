@@ -15,7 +15,7 @@ subject = "Indonesian Daily Digest"
 recipient = os.getenv("EMAIL")
 
 subprocess.run(
-    ["mail", "-s", "subject", "recipient"],
+    ["mail", "-s", subject, recipient],
     input=message,
     text=True
 )
