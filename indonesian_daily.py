@@ -7,7 +7,7 @@ from indonesian_news import get_news
 
 # setting roundup email variables
 
-message = """"""
+message = ""
 
 message += get_news()
 

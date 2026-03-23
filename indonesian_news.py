@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 import os
 import requests
 from datetime import datetime
@@ -6,7 +8,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 def get_news():
-    text = """"""
+    text = ""
     # news API 
     TOKEN = os.getenv("NEWS_API_KEY")
 
