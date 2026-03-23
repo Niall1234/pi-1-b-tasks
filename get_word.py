@@ -13,7 +13,7 @@ def get_word():
 
     message = ""
 
-    with open(f"{os.get_env("WORD_FILE_PATH")}/kamus.json", mode="r", encoding="utf-8") as read_json_file:
+    with open(f"{os.getenv("WORD_FILE_PATH")}/kamus.json", mode="r", encoding="utf-8") as read_json_file:
         kamus = json.load(read_json_file)
 
     random_word_url = kamus["index"] + random.choice(kamus["word_links"])
