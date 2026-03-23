@@ -1,15 +1,19 @@
 #!/usr/bin/python3
 
+import os
 import json
 import random
 import requests
 from bs4 import BeautifulSoup
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def get_word():
 
     message = ""
 
-    with open("/home/niall/Documents/Scripts/pi-1-b-tasks/kamus.json", mode="r", encoding="utf-8") as read_json_file:
+    with open(f"{os.get_env("WORD_FILE_PATH")}/kamus.json", mode="r", encoding="utf-8") as read_json_file:
         kamus = json.load(read_json_file)
 
     random_word_url = kamus["index"] + random.choice(kamus["word_links"])
