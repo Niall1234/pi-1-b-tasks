@@ -2,3 +2,4 @@ requests
 python-dotenv
 black
 beautifulsoup4
+feedparser

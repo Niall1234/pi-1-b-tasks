@@ -37,5 +37,5 @@ def get_news():
 
     return text
 
-print(get_news())
+#print(get_news())
 
