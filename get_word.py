@@ -31,6 +31,6 @@ def get_word():
 
     message += "WORD OF THE DAY\n"
     message += f"\n{word}\n"
-    message += f"{definition}\n"
+    message += f"{definition}\n\n"
 
     return message
